@@ -95,7 +95,7 @@ const Home: NextPage = () => {
                                 Sobre mim
                             </Heading>
 
-                            <Text textAlign={{base: 'center', md: 'start', lg: 'start'}}>Desenvolvedor à 2 anos, cursando Sistemas de Informação, venho aprimorando meus conhecimentos em desenvolvimento front-end, focado em Mobile utilizando ReactNative como framework core para meus desenvolvimentos. </Text>
+                            <Text textAlign={{base: 'center', md: 'start', lg: 'start'}}>Desenvolvedor à 2 anos, cursando Sistemas de Informação, venho aprimorando meus conhecimentos em desenvolvimento front-end, focado em Mobile utilizando ReactNative como framework core para meus desenvolvimentos. Sempre procurando vencer meus próprios medos e buscando cada vez mais ficar atualizado das melhores tecnologias do momento.</Text>
 
                         </Box>
 
