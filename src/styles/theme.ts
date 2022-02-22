@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import { ButtonStyles as Button } from '../components/buttonStyles';
 import { TitleStyles as Heading } from '../components/titleStyles';
+import { BoxStyles as Container} from '../components/boxStyles';
 
 const config = {
   initialColorMode: 'dark',
@@ -19,5 +20,6 @@ export const myTheme = extendTheme({
   components: {
     Button,
     Heading,
+    Container
   },
 });
