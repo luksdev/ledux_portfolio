@@ -113,13 +113,18 @@ const Home: NextPage = () => {
         <Heading
           fontSize={{ base: 20, md: 50, lg: 60 }}
           textAlign="center"
-          width={{ base: '40ch', md: '20ch', lg: '20ch' }}
+          width={{ base: '70%', md: '22ch', lg: '22ch' }}
         >
-          Criação Aplicações Mobile com Agilidade, Segurança e Acessibilidade.
+          Criação de Aplicações Mobile com Agilidade, Segurança e
+          Acessibilidade.
         </Heading>
       </Box>
 
-      <VStack marginTop="10" marginY={0} marginX={'auto'} width={'80%'}>
+      <VStack
+        marginTop={{ base: '45px', md: '70px', lg: '75px' }}
+        marginX={'auto'}
+        width={'80%'}
+      >
         <HStack flexDirection={{ base: 'column', md: 'row', lg: 'row' }}>
           <Box width={{ base: '100%', md: '50%', lg: '50%' }}>
             <Heading
