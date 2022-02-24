@@ -28,6 +28,9 @@ import { myTheme } from '../src/styles/theme';
 // Icons
 import ReactIcon from '../src/icons/react/react-original.svg';
 import GithubIcon from '../src/icons/github/github-original.svg';
+import NodeIcon from '../src/icons/nodejs/nodejs-original.svg';
+import NextJSIcon from '../src/icons/nextjs/nextjs-original.svg';
+import PythonIcon from '../src/icons/python/python-original.svg';
 
 // Memoji
 import LeduxeyeMemoji from '../src/images/eye.png';
@@ -184,12 +187,7 @@ const Home: NextPage = () => {
         <VStack>
           <Heading>Habilidades</Heading>
           <HStack pt={5}>
-            <Box
-              display={'flex'}
-              flexDir="column"
-              justifyContent="center"
-              mx={5}
-            >
+            <Box display={'flex'} flexDir="column" justifyContent="center">
               <IconButton aria-label="" bg={'none'}>
                 <Image src={ReactIcon} width={35} height={35} />
               </IconButton>
@@ -197,15 +195,43 @@ const Home: NextPage = () => {
                 ReactJS
               </Heading>
             </Box>
-            {/* <IconButton aria-label="" bg={'none'}>
-              <Image src={ReactIcon} width={35} height={35} />
-            </IconButton>
-            <IconButton aria-label="" bg={'none'}>
-              <Image src={ReactIcon} width={35} height={35} />
-            </IconButton>
-            <IconButton aria-label="" bg={'none'}>
-              <Image src={ReactIcon} width={35} height={35} />
-            </IconButton> */}
+
+            <Box
+              display={'flex'}
+              flexDir="column"
+              justifyContent="center"
+              px={5}
+            >
+              <IconButton aria-label="" bg={'none'}>
+                <Image src={NodeIcon} width={35} height={35} />
+              </IconButton>
+              <Heading fontSize={'13px'} pt={1}>
+                NodeJS
+              </Heading>
+            </Box>
+
+            <Box display={'flex'} flexDir="column" justifyContent="center">
+              <IconButton aria-label="" bg={'none'}>
+                <Image src={NextJSIcon} width={35} height={35} />
+              </IconButton>
+              <Heading fontSize={'13px'} pt={1}>
+                NodeJS
+              </Heading>
+            </Box>
+
+            <Box
+              display={'flex'}
+              flexDir="column"
+              justifyContent="center"
+              px={5}
+            >
+              <IconButton aria-label="" bg={'none'}>
+                <Image src={PythonIcon} width={35} height={35} />
+              </IconButton>
+              <Heading fontSize={'13px'} pt={1}>
+                Python
+              </Heading>
+            </Box>
           </HStack>
         </VStack>
       </Center>
