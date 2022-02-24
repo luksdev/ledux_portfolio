@@ -8,7 +8,6 @@ import {
   ChakraProvider,
   Box,
   Text,
-  Link,
   VStack,
   Img,
   Code,
@@ -16,13 +15,21 @@ import {
   theme,
   Heading,
   Button,
+  Link,
   HStack,
   Circle,
   Container,
+  Center,
+  IconButton,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from '../src/ColorModeSwitcher';
 import { myTheme } from '../src/styles/theme';
 
+// Icons
+import ReactIcon from '../src/icons/react/react-original.svg';
+import GithubIcon from '../src/icons/github/github-original.svg';
+
+// Memoji
 import LeduxeyeMemoji from '../src/images/eye.png';
 import LeduxnotebookMemoji from '../src/images/notebook.png';
 
@@ -31,6 +38,7 @@ const Home: NextPage = () => {
 
   return (
     <ChakraProvider theme={myTheme}>
+      {/* Header */}
       <Box
         display="flex"
         alignItems="center"
@@ -45,19 +53,27 @@ const Home: NextPage = () => {
         <Heading fontSize={'24px'} variant="primary">
           Ledux
         </Heading>
-        <Box
-          onClick={() => {
-            if (colorBox == '#8257E6') {
-              setColorBox('#1CA84C');
-            } else {
-              setColorBox('#8257E6');
-            }
-          }}
-        >
-          <ColorModeSwitcher />
+        <Box display={'flex'} alignItems="center" justifyContent="center">
+          <Link href="https://github.com/luksdev" target="_blank">
+            <IconButton aria-label="" bg={'none'}>
+              <Image src={GithubIcon} width={25} height={25} />
+            </IconButton>
+          </Link>
+          <Box
+            onClick={() => {
+              if (colorBox == '#8257E6') {
+                setColorBox('#1CA84C');
+              } else {
+                setColorBox('#8257E6');
+              }
+            }}
+          >
+            <ColorModeSwitcher />
+          </Box>
         </Box>
       </Box>
 
+      {/* MemojiBox */}
       <VStack>
         <Box
           rounded="full"
@@ -102,6 +118,8 @@ const Home: NextPage = () => {
           </Heading>
         </Heading>
       </Box>
+
+      {/* PrimaryText Home */}
       <Box
         paddingTop="5"
         display="flex"
@@ -120,6 +138,7 @@ const Home: NextPage = () => {
         </Heading>
       </Box>
 
+      {/* AboutMe */}
       <VStack
         marginTop={{ base: '45px', md: '70px', lg: '75px' }}
         marginX={'auto'}
@@ -160,6 +179,36 @@ const Home: NextPage = () => {
           </Box>
         </HStack>
       </VStack>
+
+      <Center pt={20} pb={10}>
+        <VStack>
+          <Heading>Habilidades</Heading>
+          <HStack pt={5}>
+            <Box
+              display={'flex'}
+              flexDir="column"
+              justifyContent="center"
+              mx={5}
+            >
+              <IconButton aria-label="" bg={'none'}>
+                <Image src={ReactIcon} width={35} height={35} />
+              </IconButton>
+              <Heading fontSize={'13px'} pt={1}>
+                ReactJS
+              </Heading>
+            </Box>
+            {/* <IconButton aria-label="" bg={'none'}>
+              <Image src={ReactIcon} width={35} height={35} />
+            </IconButton>
+            <IconButton aria-label="" bg={'none'}>
+              <Image src={ReactIcon} width={35} height={35} />
+            </IconButton>
+            <IconButton aria-label="" bg={'none'}>
+              <Image src={ReactIcon} width={35} height={35} />
+            </IconButton> */}
+          </HStack>
+        </VStack>
+      </Center>
     </ChakraProvider>
   );
 };
