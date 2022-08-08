@@ -49,7 +49,7 @@ const Tree: NextPage = () => {
                     <Image src={fotoPerfil} width={200} height={200} className="rounded-image" />
                 </Box>
 
-                <Text my={10} fontWeight="semibold">Software enginner</Text>
+                <Text my={10} fontWeight="semibold" fontSize={"2xl"}>Software enginner</Text>
 
                 <Box display={"flex"} gap={5} flexWrap="wrap" alignItems={"center"} justifyContent="center">
                     <Link target={"_blank"} href='https://www.linkedin.com/in/lucaseduardo-dev/'>
